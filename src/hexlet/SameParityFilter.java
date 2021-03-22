@@ -7,14 +7,20 @@ public class SameParityFilter {
 
     public static ArrayList<Integer> same_parity_filter(ArrayList<Integer> inputList) {
         ArrayList<Integer> result = new ArrayList<>();
-        if (inputList.size() == 0) return result; //Проверка на пустой массив
+        if (inputList.size() == 0) { //Проверка на пустой массив
+            return result;
+        }
         if (isEven(inputList.get(0))) {
             for (Integer i : inputList) {
-                if (isEven(i)) result.add(i);
+                if (isEven(i)) {
+                    result.add(i);
+                }
             }
         } else {
             for (Integer i : inputList) {
-                if (!isEven(i)) result.add(i);
+                if (!isEven(i)) {
+                    result.add(i);
+                }
             }
         }
         return result;
